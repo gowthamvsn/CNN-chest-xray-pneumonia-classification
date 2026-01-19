@@ -46,6 +46,10 @@ model explainability (Grad-CAM and SHAP), and performance evaluation.
 
 ---
 
+**##Hardware**
+Optimized for NVIDIA RTX 3050 GPU
+Supports CPU fallback
+
 ## How to Run
 1. Clone the repository
 2. Install dependencies:
