@@ -52,22 +52,24 @@ export CHEST_XRAY_DATASET=/path/to/chest_xray
 Optimized for NVIDIA RTX 3050 GPU
 Supports CPU fallback
 
-## Structure
+## Project Structure
 
 chest-xray-pneumonia-detection/
 ├── data/
-│   └── README.md                   # Explains dataset source & structure
+│ └── README.md # Explains dataset source & structure
 ├── notebooks/
-│   ├── pneumonia_detection.ipynb   # Custom CNN + Grad-CAM + SHAP
-│   └── mobilenetv2_approach.ipynb  # Transfer learning
+│ ├── pneumonia_detection.ipynb # Custom CNN + Grad-CAM + SHAP
+│ └── mobilenetv2_approach.ipynb # Transfer learning
 ├── models/
-│   ├── pneumonia_best_tuned_model.h5
-│   └── mobilenetv2_best_model.h5
-├── pneumonia_tuning/               # Keras Tuner results
+│ ├── pneumonia_best_tuned_model.h5
+│ └── mobilenetv2_best_model.h5
+├── pneumonia_tuning/ # Keras Tuner results
 ├── README.md
 ├── requirements.txt
 └── .gitignore
 
+
+>  **Start here:** `notebooks/pneumonia_detection.ipynb`
 
 ## How to Run
 1. Clone the repository
