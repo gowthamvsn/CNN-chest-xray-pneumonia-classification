@@ -14,6 +14,7 @@ model explainability (Grad-CAM and SHAP), and performance evaluation.
 - Images categorized into:
   - Normal
   - Pneumonia
+export CHEST_XRAY_DATASET=/path/to/chest_xray
 
 > ⚠️ Dataset is not included due to size and licensing restrictions.
 
