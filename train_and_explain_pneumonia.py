@@ -1,3 +1,7 @@
+# ==============================
+# CONFIGURATION & IMPORTS
+# ==============================
+
 import os
 import numpy as np
 import pandas as pd
@@ -23,6 +27,9 @@ import tensorflow.keras.backend as K
 
 # For SHAP
 import shap
+# ==============================
+# GPU CONFIGURATION
+# ==============================
 
 # GPU Configuration for RTX 3050
 print("Setting up GPU configuration for RTX 3050...")
@@ -37,6 +44,9 @@ if gpus:
         print(e)
 else:
     print("No GPU found, using CPU")
+# ==============================
+# GLOBAL SETTINGS & PATHS
+# ==============================
 
 # Configuration optimized for RTX 3050
 model_path = "pneumonia_best_tuned_model.h5"
@@ -51,6 +61,9 @@ test_image_path = os.path.join(test_dir, 'PNEUMONIA', 'person19_virus_50.jpeg')
 # Set random seeds for reproducibility
 np.random.seed(42)
 tf.random.set_seed(42)
+# ==============================
+# DATA LOADING & PREPROCESSING
+# ==============================
 
 print("Setting up data generators...")
 
@@ -98,6 +111,10 @@ print("Class indices:", train_generator.class_indices)
 print(f"Training samples: {train_generator.samples}")
 print(f"Validation samples: {val_generator.samples}")
 print(f"Test samples: {test_generator.samples}")
+
+# ==============================
+# CUSTOM CNN + HYPERPARAMETER TUNING
+# ==============================
 
 # =============================================================================
 # 1. HYPERPARAMETER TUNING WITH KERAS TUNER (RTX 3050 Optimized)
@@ -267,6 +284,9 @@ def plot_training_history(history):
     
     plt.tight_layout()
     plt.show()
+# ==============================
+# MODEL TRAINING OR LOADING
+# ==============================
 
 # Check if model exists, otherwise train it
 if os.path.exists(model_path):
@@ -284,6 +304,10 @@ else:
     # Load the saved best model
     model = load_model(model_path)
     print("Model training completed and saved!")
+
+# ==============================
+# MODEL EXPLAINABILITY: GRAD-CAM
+# ==============================
 
 # =============================================================================
 # 2. GRAD-CAM IMPLEMENTATION
@@ -423,6 +447,10 @@ else:
             print(f"Using alternative test image: {test_files[0]}")
             heatmap, overlay = visualize_gradcam(model, alternative_path)
 
+# ==============================
+# MODEL EXPLAINABILITY: SHAP
+# ==============================
+
 # =============================================================================
 # 3. SHAP ANALYSIS
 # =============================================================================
@@ -484,6 +512,10 @@ print("="*50)
 
 sample_images, sample_labels = get_sample_test_images(3)
 shap_values = analyze_with_shap(model, sample_images)
+
+# ==============================
+# MODEL EVALUATION & METRICS
+# ==============================
 
 # =============================================================================
 # 4. MODEL EVALUATION
@@ -553,6 +585,9 @@ print("All analyses have been completed successfully!")
 
 
 
+# ==============================
+# EXPERIMENTAL METHODS (OPTIONAL)
+# ==============================
 
 ###############################################################
 ## For additional method trials --
