@@ -69,7 +69,7 @@ chest-xray-pneumonia-detection/
 └── .gitignore
 ```
 
->  **Start here:** `notebooks/train_and_explain_pneumonia.py`
+>  **Start here:** `train_and_explain_pneumonia.py`
 
 ## How to Run
 1. Clone the repository
