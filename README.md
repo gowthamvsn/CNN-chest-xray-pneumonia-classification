@@ -46,7 +46,8 @@ model explainability (Grad-CAM and SHAP), and performance evaluation.
 
 ---
 
-**##Hardware**
+## Hardware
+
 Optimized for NVIDIA RTX 3050 GPU
 Supports CPU fallback
 
