@@ -40,7 +40,7 @@ else:
 
 # Configuration optimized for RTX 3050
 model_path = "pneumonia_best_tuned_model.h5"
-base_dir = r'D:\course material\5505\chest_xray'
+base_dir = os.environ.get("CHEST_XRAY_DATASET", "data/chest_xray")
 train_dir = os.path.join(base_dir, 'train')
 val_dir = os.path.join(base_dir, 'val')
 test_dir = os.path.join(base_dir, 'test')
