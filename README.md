@@ -53,18 +53,21 @@ Optimized for NVIDIA RTX 3050 GPU
 Supports CPU fallback
 
 ## Structure
+
 chest-xray-pneumonia-detection/
-├── chest_xray/                     # ← Put dataset here (or use symlink)
-│   ├── train/
-│   ├── val/
-│   └── test/
-├── pneumonia_detection.ipynb       # Main notebook (custom CNN + Grad-CAM + SHAP)
-├── mobileNetV2_approach.ipynb      # Alternative - transfer learning version
-├── pneumonia_best_tuned_model.h5   # Best custom CNN model
-├── mobilenetv2_best_model.h5       # Best MobileNetV2 model
+├── data/
+│   └── README.md                   # Explains dataset source & structure
+├── notebooks/
+│   ├── pneumonia_detection.ipynb   # Custom CNN + Grad-CAM + SHAP
+│   └── mobilenetv2_approach.ipynb  # Transfer learning
+├── models/
+│   ├── pneumonia_best_tuned_model.h5
+│   └── mobilenetv2_best_model.h5
 ├── pneumonia_tuning/               # Keras Tuner results
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
+
 
 ## How to Run
 1. Clone the repository
