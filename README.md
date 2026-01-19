@@ -53,7 +53,7 @@ Optimized for NVIDIA RTX 3050 GPU
 Supports CPU fallback
 
 ## Project Structure
-
+'''
 chest-xray-pneumonia-detection/
 ├── data/
 │ └── README.md # Explains dataset source & structure
@@ -67,9 +67,9 @@ chest-xray-pneumonia-detection/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+'''
 
-
->  **Start here:** `notebooks/pneumonia_detection.ipynb`
+>  **Start here:** `notebooks/train_and_explain_pneumonia.py`
 
 ## How to Run
 1. Clone the repository
